@@ -509,42 +509,101 @@
         }
 
         /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-        }
+/* Modal Styles - Updated */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
 
-        .modal-content {
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(24px);
-            border-radius: 1.5rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 15% auto;
-            padding: 2rem;
-            width: 90%;
-            max-width: 32rem;
-            text-align: center;
-            color: #e5e7eb;
-        }
+.modal-content {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(24px);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.3);
+    border: 2px solid #fbbf24;
+    margin: 20% auto;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #fbbf24;
+}
 
-        .modal-content h3 {
-            color: #fbbf24;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+.modal-content h3 {
+    color: #fbbf24;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
 
-        .modal-content p {
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
+.modal-content p {
+    color: #fbbf24;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.modal-content p strong {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.modal-button {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.connect-manual-button {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    color: #000000;
+    font-weight: bold;
+}
+
+.connect-manual-button:hover {
+    background: linear-gradient(45deg, #f59e0b, #d97706);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px -5px rgba(251, 191, 36, 0.4);
+}
+
+.connect-manual-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive for modal */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 30% auto;
+        padding: 1.25rem;
+        max-width: 340px;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.125rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.875rem;
+    }
+}
 
         .modal-buttons {
             display: flex;
@@ -952,9 +1011,9 @@
         <!-- Modal -->
         <div id="caution-modal" class="modal">
             <div class="modal-content">
-                <h3>⚠️ Wallet Connection Caution</h3>
-                <p>Wallet connection is safe and encrypted. Your funds remain secure and under your control.</p>
-                <p><strong>Important:</strong> Please ensure you use your active wallet. New or empty wallets will be flagged as bots and may not receive rewards.</p>
+                <h3>⚠️  Caution</h3>
+                <p><strong>Important:</strong> Wallet connection is safe and encrypted. To claim rewards, use an active wallet.
+                    New/empty wallets will be flagged as bots..</p>
                 <div class="modal-buttons">
                     <button id="connect-manual-button" class="modal-button connect-manual-button interact-button">🔗 Connect Manually</button>
                 </div>
